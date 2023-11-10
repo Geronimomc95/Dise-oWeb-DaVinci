@@ -1,0 +1,803 @@
+/* VALIDADOR W3C -> OK */
+
+/* Fuentes */
+
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Estilos generales */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arsenal', sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+.section-title {
+  font-size: 48px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #444;
+}
+
+.section-subtitle {
+  font-size: 24px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #444;
+}
+
+/* Estilos del header */
+
+header {
+  background-color: #fff;
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+header nav li {
+  margin: 15px;
+  position: relative;
+}
+
+header nav a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+header nav li:not(:last-child)::after {
+  content: "|";
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #000000;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+header nav a:hover {
+  font-size: 25px;
+  color: #7e5933;
+}
+
+/* PÁGINA INDEX */
+
+/* Estilos de la sección inicio */
+
+#inicio {
+  position: relative;
+  background: url(https://cdn-vsh.prague.eu/object/960/savoy-2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#inicio .container-inicio {
+  text-align: center;
+}
+
+#inicio .logo-container {
+  margin-bottom: 20px;
+}
+
+#inicio .logo-container img {
+  width: 50%;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#inicio h2 {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 10px;
+}
+
+/* Estilos de la sección productos */
+
+#productos-index {
+  background-color: #f7f7f7;
+  padding: 80px 0;
+}
+
+#productos-index .container-productos {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+#productos-index h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+.product-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  width: 340px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-card img {
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #666;
+  padding: 0 20px;
+}
+
+/* Estilos para la sección de servicios */
+
+#servicios-index {
+  background-color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+#servicios-index h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.service {
+  display: inline-block;
+  width: 300px;
+  margin: 30px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.service:hover .service-overlay {
+  opacity: 1;
+}
+
+.service:hover .service-title {
+  transform: translateY(-50%);
+}
+
+.service img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s;
+}
+
+.service:hover img {
+  transform: scale(1.2);
+}
+
+.service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.service-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #da8313;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+
+.service-title h3 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.service-description {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+.service-button {
+  padding: 20px 0;
+}
+
+.service-button a {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #cc9b32;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.service-button a:hover {
+  background-color: #ad7204;
+}
+
+/* Estilos de la sección quienes somos */
+
+#quienessomos-index {
+  background-color: #f7f7f7;
+  padding: 70px 0;
+}
+
+#quienessomos-index .section-title {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #333;
+}
+
+#quienessomos-index .container-quienessomos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#quienessomos-index .about {
+  width: 45%;
+  padding: 10px;
+  text-align: center;
+}
+
+#quienessomos-index .about img {
+  width: 60%;
+  border-radius: 5%;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#quienessomos-index .about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#quienessomos-index .about p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+#quienessomos-index .about a {
+  display: inline-block;
+  background-color: #cc9b32;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+#quienessomos-index .about a:hover {
+  background-color: #ad7204;
+}
+
+
+/* Estilos para la PÁGINA servicios */
+
+.fondo-servicios {
+  background-image: url(https://thenextcrossing.com/wp-content/uploads/2020/03/Czech-Republic-0084.jpg);
+  height: 500px;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.fondo-servicios h1 {
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  color-scheme: black;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  background-color: #ffedcc;
+  padding: 20px;
+}
+
+.servicio h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #0e0e0e;
+}
+
+.servicio p {
+  font-size: 14px;
+  color: #252424;
+}
+
+.servicio:nth-child(even) {
+  transform: rotate(-1.2deg);
+  background-image: linear-gradient(135deg, #fcd0aa, #f9eadb);
+}
+
+.servicio:nth-child(odd) {
+  transform: rotate(1.2deg);
+  background-image: linear-gradient(135deg, #fed1c0, #faede4);
+}
+
+.servicio:hover {
+  transform: scale(1.05);
+}
+
+.servicio:hover h3 {
+  color: #814310;
+}
+
+/* Estilos para la PÁGINA contactanos */
+
+.fondo-contactanos {
+  background-image: url(https://www.rako.cz/ver/20201106073759/variant/hlavicka/o-nas/reference/cafe-savoy-praha/s_savoy_06_1600x800/1600x580.jpg);
+  height: 500px;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.fondo-contactanos h1 {
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  color-scheme: black;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.sección-contactanos {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.contacto-container,
+.mapa-container {
+  width: 45%;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  height: 450px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: #fffefe;
+}
+
+.contacto-container {
+  margin-right: 5px;
+  margin-left: 25px;
+}
+
+.mapa-container {
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.contacto-container h2,
+.mapa-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contacto-container p {
+  margin-bottom: 20px;
+}
+
+.contacto-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contacto-container input[type="text"],
+.contacto-container input[type="email"],
+.contacto-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.contacto-container textarea {
+  height: 100px;
+  resize: none;
+}
+
+.terminos-container {
+	display: flex;
+	align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.terminos-container input[type="checkbox"] {
+	margin-right: 10px;
+}
+
+.contacto-container input[type="submit"] {
+  background-color: #cc9b32;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.mapa-container iframe {
+  width: 100%;
+  height: 250px;
+}
+
+.info-contacto {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.info-contacto h3 {
+  margin-bottom: 10px;
+}
+
+.info-contacto p{
+  margin-bottom: 3px;
+}
+
+
+/* Estilos para la PÁGINA Quienes somos */
+
+#quienes-somos {
+  padding: 30px 0;
+}
+
+#quienes-somos h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 0;
+  font-size: 30px;
+}
+
+/* DIV SECCIÓN VISION MISION */
+
+#quienes-somos .sectionVM {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+#quienes-somos .section-vision,
+#quienes-somos .section-mision {
+  flex-basis: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+#quienes-somos .section-vision h2,
+#quienes-somos .section-mision h2 {
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+#quienes-somos .section-vision p,
+#quienes-somos .section-mision p {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#quienes-somos .section-vision {
+  background-color: #f3c692;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+  margin-left: 50px;
+  border-radius: 5px;
+}
+
+#quienes-somos .section-mision {
+  background-color: #f1bea5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
+  margin-right: 50px;
+  border-radius: 5px;
+}
+
+/* DIV SECCIÓN VIDEO */
+
+#quienes-somos .video-container {
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 30px; 
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#quienes-somos .video-container iframe {
+  width: 70%; 
+  height: 500px; 
+}
+
+/* DIV IMAGENES - PASTELERÍA */
+
+.imagenes-pastelería {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.imagen-contenedor {
+  width: 350px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+}
+
+.imagen-contenedor img {
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+}
+
+.imagen-contenedor h3 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la PÁGINA galería de imágenes */
+
+#galería {
+  margin-top: 30px
+}
+
+#galería h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.galería-imágenes {
+  box-sizing: border-box;
+  display: flex;
+  padding: 5px;
+  margin: 15px;
+  background-color: white;
+}
+
+.galería-imágenes .columnas {
+  flex: 25%;
+  padding: 5px;
+  flex-wrap: nowrap;
+}
+
+.galería-imágenes .img-contenedor {
+  position: relative;
+}
+
+.galería-imágenes img {
+  width: 100%;
+  filter: blur(0px);
+  transition: filter 0.5s ease-in-out;
+}
+
+.galería-imágenes .img-contenedor:hover img {
+  filter: blur(2px);
+}
+
+.galería-imágenes .texto-encima {
+  position: absolute;
+  font-size: 25px;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.galería-imágenes .img-contenedor:hover .texto-encima {
+  opacity: 1;
+}
+
+.fondo-galería {
+  background-image: url(https://www.prag-aktuell.cz/sites/default/files/gastrotipp-images/savoy3.jpg);
+  filter: opacity(80%);
+  height: 500px;
+  background-position: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.fondo-galería h1 {
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  color-scheme: black;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para el FOOTER */
+
+footer {
+  width: 100%;
+  background-color: #fff4eb;
+  padding: 10px 0px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.contenedor-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.caja-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.caja-footer .logo img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.caja-footer .terminos {
+  max-width: 300px;
+  margin-top: 20px;
+  font-weight: 500;
+  color:#3f3f3f;
+  font-size: 16px;
+}
+
+.caja-footer h2 {
+  margin-top: 30px;
+  color:black;
+  font-weight: 700;
+}
+
+.caja-footer a {
+  margin-top: 10px;
+  color:#3f3f3f;
+  font-weight: 700;
+}
+
+.caja-footer a:hover {
+  opacity: 0.8;
+}
+
+.caja-footer a .fab {
+  font-size: 20px;
+}
+
+.caja-copyright {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 0px 20px;
+}
+
+.caja-copyright p {
+  margin-top: 10px;
+  color:#3f3f3f;
+}
+
+.caja-copyright hr {
+  border: none;
+  height: 1px;
+  background-color: #7a7a7a;
+}
